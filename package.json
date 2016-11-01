@@ -1,0 +1,22 @@
+{
+  "name": "github-org",
+  "version": "1.0.0",
+  "description": "Using Ajax to access git orgs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syedali575/Github-ors.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syedali575/Github-ors/issues"
+  },
+  "homepage": "https://github.com/syedali575/Github-ors#readme",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
