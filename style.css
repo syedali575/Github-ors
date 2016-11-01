@@ -1,5 +1,15 @@
 nav {
-  background-color: #ecdfeb;
-  border: 1px solid #1cfd1d; }
+  background-color: #fof5f6;
+  width: 50%;
+  margin: 0 auto; }
+  nav ul {
+    padding-left: 0px; }
+
+li {
+  border: 1px solid #060606;
+  margin: 5%;
+  height: 30px;
+  list-style-type: none;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
