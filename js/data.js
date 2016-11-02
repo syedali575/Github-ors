@@ -4,20 +4,40 @@
 window.github = window.github || {};
 
 
-console.log("I am in data.js file");
+$("button")
+  .on("click", function getData(){
+    var token = $("input").val();
+    $.ajax({
+      url:"https://api.github.com/users/jisaacks/orgs",
+      method: "GET",
+      dataType: "json",
+      headers: {
+      Authorization: "token " + token
+      }
 
 
 
+    })
+
+    .done(function processData(ajaxIncomingData){
+      // console.log("Received data from git", ajaxIncomingData);
+
+      console.log(ajaxIncomingData);
+
+      window.github.buildList(ajaxIncomingData)
+
+    })
+
+    .fail(function noData(){
+      console.log("Did not get data");
+    });
 
 
 
+// console.log(storage);
 
 
 
-
-
-
-
-
+  });
 
 })();

@@ -1,35 +1,24 @@
-(function(){
+(function() {
 "use strict";
 
 window.github = window.github || {};
 
-window.github.storage = [];
+window.github.buildList = function buildList(data) {
+  console.log("buildList", data);
 
-
-
-$("button")
-  .on("click", function getData(){
-    var token = $("input").val();
-    $.ajax({
-      url:"https://api.github.com/users/jisaacks/orgs",
-      method: "GET",
-      dataType: "json",
-      headers: {
-      Authorization: "token " + token
-      }
-
-    })
-    .done(function processData(incomingData){
-    console.log("Received data from git", incomingData);
-    })
-
-    .fail(function noData(){
-    console.log("Did not get data");
-  });
-
-    // storage.push[incomingData];
-
+$.each(data, function loopArray(i){
+  // console.log(i);
+$(".list").append('<li><img src="' + data[i].avatar_url + '"></img><p>' + data[i].login + '/p></li>');
 });
+
+};
+
+
 
 
 })();
+
+
+//   $(data).each( function processData(i){
+//
+// //   });
